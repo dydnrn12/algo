@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-
+#include <cmath>
 using namespace std;
 //DP problem 
 int main(){
@@ -17,6 +17,5 @@ int main(){
 	
 	for(int j=3; j<=n; j++)
 	dp[j] = max((dp[j-2]+st[j]),(dp[j-3]+st[j-1]+st[j])); //recursion fomula
-	
 	cout<<"max:"<<dp[n]<<endl;
 }
